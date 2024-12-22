@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pyvisa-py = ">0.7.2"
+pyvisa-py = ">=0.7.2"
 
 [dev-packages]
 
