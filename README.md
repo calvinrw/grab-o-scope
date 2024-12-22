@@ -6,7 +6,7 @@ under Windows, Linux and macOS.
 
 ![example screen grab](./assets/example-grab.png)
 
-_Note: At present, `grab-o-scope` supports the Rigol DHO924 and DS1054Z oscilloscopes. Other brands and models can be easily added -- see the developer notes on "Adding support for a new Oscilloscope"._
+_Note: At present, `grab-o-scope` supports the Rigol DHO924, DS1054Z, and MSO1074Z oscilloscopes. Other brands and models can be easily added -- see the developer notes on "Adding support for a new Oscilloscope"._
 
 ## Features
 
