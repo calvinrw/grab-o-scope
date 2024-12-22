@@ -58,6 +58,15 @@ class RigolDS1054ZGrabber(Grabber):
         buf = instrument.query_binary_values(':DISP:DATA? ON,0,PNG', datatype='B')
         return buf
 
+class RigolMSO1074ZGrabber(Grabber):
+    """Grabber for the Rigol MSO1074Z oscilloscope."""
+    IDN_PATTERN = r'RIGOL TECHNOLOGIES,MSO1\w+Z,.*'
+
+    @classmethod
+    def capture_screen(cls, instrument):
+        buf = instrument.query_binary_values(':DISP:DATA? ON,0,PNG', datatype='B')
+        return buf
+
 # ******************************************************************************
 # Add device-specific subclasses of Grabber above this line.
 # ******************************************************************************
@@ -69,6 +78,7 @@ class GrabOScope:
         Keysight3000XGrabber,
         RigolDHO924Grabber,
         RigolDS1054ZGrabber,
+        RigolMSO1074ZGrabber,
     ]
 
     def __init__(self, options):
